@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJM Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo glow-text">SJM Developers</div>
+        <div class="nav-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="glow-link">Home</a></li>
+            <li><a href="#about" class="glow-link">About</a></li>
+            <li><a href="#skills" class="glow-link">Skills</a></li>
+            <li><a href="#projects" class="glow-link">Projects</a></li>
+            <li><a href="#contact" class="glow-link">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle glow-button">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Notification System -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="particle-background"></div>
+        <div class="content">
+            <h1 class="glitch" data-text="Creative Developer">Creative Developer</h1>
+          <p class="typing-text"></p></br>
+            <div class="cta-buttons">
+                <a href="#contact" class="glow-button">Hire Me</a>
+                <a href="#projects" class="glow-button outline">View Work</a>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title glow-text">About Me</h2>
+        <div class="about-content">
+            <div class="profile-card" data-tilt>
+                <img src="https://i.imgur.com/T7Am8ag.jpeg" alt="Profile">
+                <div class="social-links">
+                    <a href="#" class="glow-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="glow-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="glow-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>Creative developer with a passion for building beautiful and functional websites.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="30">0</h3>
+                        <p>Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="counter" data-target="5">0</h3>
+                        <p>Years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title glow-text">Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <img src="https://i.imgur.com/Ad5BiYU.jpeg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>Web Development</p>
+                    <a href="#" class="glow-button">View Project</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="app">
+                <img src="https://i.imgur.com/iikMBQL.jpeg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>App Development</p>
+                    <a href="#" class="glow-button">View Project</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="design">
+                <img src="https://i.imgur.com/ONHc6yC.jpeg" alt="Project 3">
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>UI/UX Design</p>
+                    <a href="#" class="glow-button">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title glow-text">Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope glow-icon"></i>
+                    <p>email@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone glow-icon"></i>
+                    <p>+1 234 567 890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt glow-icon"></i>
+                    <p>New York, USA</p>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" required></textarea>
+                    <span class="focus-border"></span>
+                </div>
+                <button type="submit" class="glow-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 20** SJM Developers. BLA Bla Bla.</p>
+</footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top glow-button">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

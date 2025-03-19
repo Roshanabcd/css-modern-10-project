@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  body {
+    background: #000;
+    background-image: url("https://images.unsplash.com/photo-1693407549523-9a75912e828b?q=80&w=1637&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Oxygen", sans-serif;
+  }
+  
+  .container {
+    width: calc(100% - 32px);
+    min-width: 320px;
+    max-width: 400px;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right top, #313131aa, #efefef55);
+    backdrop-filter: blur(12px);
+    border: 1px solid #f0f0f025;
+    overflow: hidden;
+    font-family: "Oxygen", sans-serif;
+    gap: 24px;
+  }
+  
+  .container .header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container .title {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+  
+  .container .cantor {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
+  .container .view {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .container .view .duration,
+  .container .view .current-time {
+    min-width: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container .view input {
+    flex-grow: 1;
+  }
+  
+  .input {
+    --input-width: 0%;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    overflow-y: visible;
+    bottom: -1px;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: #33333355;
+    height: 6px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
+      position: absolute;
+    top: 50%;
+    transform: translatey(-50%)
+  }
+  
+  .input::before {
+    content: "";
+    width: calc(var(--input-width));
+    background: white;
+    height: 6px;
+    display: block;
+    position: absolute;
+    top: calc(50%);
+    left: 0px;
+    transform: translateY(-50%);
+    z-index: 20;
+    border-radius: 6px;
+    transition: --input-width 0.1s ease-in-out;
+  }
+  
+  .input::after {
+    content: "";
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: calc(var(--input-width, 0%) - 1px);
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+      transition: left 0.1s ease-in-out;
+    flex-shrink: 0px;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    width: 100%;
+    transition: --input-width 0.1s ease-in-out;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    display: none;
+  }
+  
+  .container .controllers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container .controllers .group-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .container .controllers button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    padding: 12px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .container .controllers button:hover {
+    background: #33333355;
+    color: #f0f0f0f0;
+  }
+  
+  .container .controllers button svg path {
+    stroke: #ddd;
+  }
+  
+  .container .group-buttons button.btn-start{
+    background: #333333a1;
+    border-radius: 50%;
+  }
+  
+  .container #icon-start{
+    fill: #ddd;
+  }
+  
+  .btn-next {
+    transform: scale(-1);
+  }
+  
